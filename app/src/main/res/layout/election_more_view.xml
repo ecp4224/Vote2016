@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="me.eddiep.android.voting.ElectionActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:paddingTop="25dp"
+        android:paddingBottom="25dp"
+        android:background="#d80027">
+
+        <LinearLayout
+            android:layout_centerHorizontal="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal|center_vertical">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_stars_black"/>
+            <TextView
+                android:id="@+id/electionTitle"
+                android:textSize="23dp"
+                android:textStyle="bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#fff"
+                android:text="Election Title Here"/>
+            <TextView
+                android:id="@+id/electionDate"
+                android:layout_width="wrap_content"
+                android:textColor="#fff"
+                android:layout_height="wrap_content"
+                android:text="Tuesday April 19, 2016    |    3 days"/>
+        </LinearLayout>
+    </RelativeLayout>
+    <GridView
+        android:id="@+id/electionGrid"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:numColumns="2"
+        android:stretchMode="columnWidth"
+        android:layout_gravity="center_horizontal" />
+
+</LinearLayout>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="260dp">
+
+    <ImageView
+        android:id="@+id/electionBackground"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="260dp"
+        android:paddingTop="52dp"
+        android:paddingBottom="32dp">
+
+        <LinearLayout
+            android:layout_marginTop="20dp"
+            android:layout_centerHorizontal="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_stars"/>
+            <TextView
+                android:id="@+id/electionTitle"
+                android:textSize="23dp"
+                android:textStyle="bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#fff"
+                android:text="Election Title Here"/>
+            <TextView
+                android:id="@+id/electionDate"
+                android:layout_width="wrap_content"
+                android:textColor="#ccffffff"
+                android:layout_height="wrap_content"
+                android:text="Tuesday April 19, 2016    |    3 days"/>
+        </LinearLayout>
+
+        <android.support.design.widget.FloatingActionButton
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/electionPin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_margin="@dimen/fab_margin"
+            android:src="@drawable/ic_star_rate_black_18dp"
+            android:focusable="false"
+            app:fabSize="mini"
+            android:tint="#fff"/>
+    </RelativeLayout>
+</RelativeLayout>

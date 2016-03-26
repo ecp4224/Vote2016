@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="me.eddiep.android.voting.ElectionActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical">
+        <fragment
+            android:id="@+id/map"
+            android:name="com.google.android.gms.maps.SupportMapFragment"
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:layout_height="300dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="#d80027"
+            android:padding="15dp">
+            <TextView
+                android:id="@+id/electionTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Election Title Here"
+                android:textColor="#fff"
+                android:layout_gravity="center_horizontal"
+                android:textAlignment="center"
+                android:textSize="24dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:textStyle="bold"
+                android:textAllCaps="true"/>
+            <TextView
+                android:id="@+id/electionDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#ccffffff"
+                android:text="November 23, 2016"
+                android:layout_gravity="center_horizontal"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="2">
+        <ImageView
+            android:id="@+id/electionBackground"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingTop="10dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp">
+            <TextView
+                android:id="@+id/electionDescription"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#ccffffff"
+                android:text="Description of the event can go here. Hey look at me I'm a multiline textview that is doing great things like going on multiple lines and the such"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingTop="15dp"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:paddingBottom="20dp">
+                <Button
+                    android:id="@+id/electionNotify"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:textColor="#CCFFFFFF"
+                    android:layout_gravity="bottom"
+                    android:background="@drawable/button_boarder"
+                    android:layout_marginRight="20dp"
+                    android:text="NOTIFY ME"/>
+                <Button
+                    android:id="@+id/electionMore"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textColor="#CCFFFFFF"
+                    android:layout_gravity="bottom"
+                    android:background="@drawable/button_boarder"
+                    android:text="CANDIDATES"/>
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>
